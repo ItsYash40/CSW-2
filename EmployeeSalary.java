@@ -1,14 +1,10 @@
-// Base class Employee
 class Employee1 {
-    // Default salary for an employee
     public double calculateSalary() {
         return 50000;  // Default salary for an employee
     }
 }
 
-// Subclass Manager that overrides calculateSalary method
 class Manager extends Employee1 {
-    // Override the calculateSalary method to include a bonus
     @Override
     public double calculateSalary() {
         double baseSalary = super.calculateSalary();  // Call base class method
@@ -17,14 +13,11 @@ class Manager extends Employee1 {
     }
 }
 
-// Driver class to demonstrate method overriding
 public class EmployeeSalary {
     public static void main(String[] args) {
-        // Create an Employee object and calculate salary
         Employee1 emp = new Employee1();
         System.out.println("Employee Salary: " + emp.calculateSalary());
 
-        // Create a Manager object and calculate salary
         Manager mgr = new Manager();
         System.out.println("Manager Salary (with bonus): " + mgr.calculateSalary());
     }
