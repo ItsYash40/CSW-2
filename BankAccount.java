@@ -42,7 +42,7 @@ public class BankAccount {
     }
 
     public static void main(String[] args) {
-        BankAccount myAccount = new BankAccount("12345", "John Doe", 500.00);
+        BankAccount myAccount = new BankAccount("12345", "John Doe", 1500.00);
 
         System.out.println("Initial Balance: Rs." + myAccount.checkBalance());
 
@@ -56,3 +56,11 @@ public class BankAccount {
         System.out.println("Balance after failed withdrawal: Rs." + myAccount.checkBalance());
     }
 }
+
+
+
+
+
+
+
+
