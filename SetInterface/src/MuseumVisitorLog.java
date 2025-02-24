@@ -3,12 +3,10 @@ import java.util.Scanner;
 
 public class MuseumVisitorLog {
     public static void main(String[] args) {
-        // Create a LinkedHashSet to store visitor IDs
         LinkedHashSet<String> visitorLog = new LinkedHashSet<>();
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            // Display menu options
             System.out.println("\nMuseum Visitor Log Menu:");
             System.out.println("1. Add Visitor ID");
             System.out.println("2. Check if Visitor ID exists");
@@ -16,11 +14,9 @@ public class MuseumVisitorLog {
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline character
-
+            scanner.nextLine(); 
             switch (choice) {
                 case 1:
-                    // Add Visitor ID
                     System.out.print("Enter Visitor ID: ");
                     String visitorId = scanner.nextLine();
                     if (visitorLog.add(visitorId)) {
@@ -31,7 +27,6 @@ public class MuseumVisitorLog {
                     break;
 
                 case 2:
-                    // Check if Visitor ID exists
                     System.out.print("Enter Visitor ID to check: ");
                     String checkId = scanner.nextLine();
                     if (visitorLog.contains(checkId)) {
@@ -42,7 +37,6 @@ public class MuseumVisitorLog {
                     break;
 
                 case 3:
-                    // Display Visitor Log
                     System.out.println("\nVisitor Log (Order of Arrival):");
                     for (String id : visitorLog) {
                         System.out.println(id);
@@ -50,7 +44,6 @@ public class MuseumVisitorLog {
                     break;
 
                 case 4:
-                    // Exit the program
                     System.out.println("Exiting the program...");
                     scanner.close();
                     return;
@@ -61,3 +54,13 @@ public class MuseumVisitorLog {
         }
     }
 }
+
+
+
+
+/*A museum wants to maintain a log of visitors entering their premises. The log
+should:
+• Store the visitor IDs in the order they arrived.
+• Ensure no duplicate visitor IDs are recorded.
+• Allow checking whether a visitor has already entered.
+• Display the list of visitors in their order of arrival.*/
